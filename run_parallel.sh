@@ -13,7 +13,7 @@ rm -f $OUTPUT_DIR/*.tar
 # Run the processes in parallel
 for (( i=0; i<$NUM_WORKERS; i++ ))
 do
-  conda run -n py310 python create_webdataset.py \
+  python create_webdataset.py \
     --source $SOURCE_DIR \
     --output $OUTPUT_DIR \
     --shard-id $i \

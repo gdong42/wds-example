@@ -1,7 +1,8 @@
-
+.DS_Store/
 # Python cache
 __pycache__/
 *.pyc
 
 # Output directory for generated datasets
 webdataset_output/
+.venv/

@@ -1,4 +1,3 @@
-
 import webdataset as wds
 import argparse
 import os
@@ -11,7 +10,7 @@ def read_webdataset(dataset_path):
     # Create a dataset object
     # Use glob to expand the wildcard path
     shard_list = glob(os.path.join(dataset_path, 'shard-*.tar'))
-    dataset = wds.WebDataset(shard_list)
+    dataset = wds.WebDataset(shard_list, shardshuffle=False)
 
     # Iterate through the dataset
     for i, sample in enumerate(dataset):
